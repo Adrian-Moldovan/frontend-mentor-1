@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display&display=swap');
+
+:root{
+  --border-radius: 10px;
+  --fragrant-color-1: #382ae1;
+  --dim-color-1: #717fa6;
+}
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  margin: 0;
+  font-family: 'Red Hat Display', sans-serif;
+  background-color: #e0e8ff;
+}
+
+.container{
+  height: 100vh;
+  background-image: url('images/pattern-background-mobile.svg');
+  background-repeat: no-repeat;
+  background-size: 100vw 50vh ;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card{
+  width: 22rem;
+  height: 35rem;
+  background-color: #fff;
+  border-radius: var(--border-radius);
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.card-hero{
+  background-image: url('images/illustration-hero.svg');
+  background-size: cover;
+  border-top-left-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
+  flex: 1;
+}
+
+.card-content{
+  flex: 2;
+  padding: 1.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-evenly;
+}
+
+.card-content h1{
+  text-align: center;
+  font-size: 1.6rem;
+}
+
+.card-content a{
+  text-decoration: none;
+}
+
+.card-content .card-description{
+  text-align: center;
+  color: var(--dim-color-1);
+}
+
+.card-content .card-plan{
+  border-radius: var(--border-radius);
+  background-color: #f8f9fe;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-content .card-actions a{
+  display: block;
+  text-align: center;
+  font-weight: 700;
+  font-size: 0.75rem;
+  text-decoration: ;
+}
+
+.card-content .card-actions{
+  display: block;
+}
+
+.card-actions .pay{
+  background-color: var(--fragrant-color-1);
+  border-radius: var(--border-radius);
+  padding: 0.7rem 1rem;
+  color: #fff;
+  margin-bottom: 1.5rem;
+  box-shadow: 0px 10px 15px 2px var(--dim-color-1);
+}
+
+
+.card-actions .cancel{
+  color: var(--dim-color-1);
+}
+
+
+@media (min-width: 376px) {
+  .container{
+    /* background-size: 100vw; */
+    background-image: url('images/pattern-background-desktop.svg');
+  }
+}
